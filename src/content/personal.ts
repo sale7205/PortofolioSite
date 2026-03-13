@@ -11,5 +11,6 @@ export const personal = {
     linkedin: "https://linkedin.com/in/0c0",
     email:    "salehaldhafeeri@outlook.com",
     resume:   "/resume/SalehAldhafeeriAerospaceCVV.pdf",
+    resume2:   "/resume",
   },
 } as const

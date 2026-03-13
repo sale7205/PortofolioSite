@@ -42,6 +42,29 @@ export const projects: Project[] = [
       },
     ],
   },
+    {
+    slug:        "autonomous-drone",
+    title:       "Autonomous Drone",
+    subtitle:    "Landing on Moving Object",
+    category:    "GNC",
+    description: "Built a cascaded PID/PD quadrotor guidance and control system for autonomous landing on a moving vehicle, achieving centimeter-level touchdown accuracy.",
+    longDescription:
+      "This project focused on guidance and control for autonomous quadrotor landing on a moving ground vehicle. The system used a cascaded PID/PD control architecture with flight-phase logic and velocity feedforward to manage approach, tracking, and touchdown. Performance centered on precise relative motion control and stable terminal landing under dynamic target motion.",
+    highlights: [
+      "Cascaded PID/PD guidance and control architecture for quadrotor landing",
+      "Autonomous tracking and landing on a moving ground vehicle",
+      "Velocity feedforward to improve target-following performance",
+      "Centimeter-level touchdown accuracy with flight-phase landing logic",
+    ],
+    assets: [
+      {
+        type:        "pdf",
+        label:       "Report",
+        description: "Technical report covering the control architecture, landing logic, simulation setup, and performance results.",
+        path:        "/pdfs/autonomous-drone-landing.pdf",
+      },
+    ],
+  },
   {
     slug:        "ekf-lunar-navigation",
     title:       "Extended Kalman Filter",
@@ -65,6 +88,7 @@ export const projects: Project[] = [
       },
     ],
   },
+
   {
     slug:        "turbine-blade-cfd",
     title:       "Turbine Blade CFD",
@@ -108,29 +132,6 @@ export const projects: Project[] = [
         label:       "Report",
         description: "Summary report of engineering tasks, scope of work, and key technical contributions during the internship.",
         path:        "/pdfs/saudia-technic.pdf",
-      },
-    ],
-  },
-  {
-    slug:        "technical-portfolio",
-    title:       "Technical Portfolio",
-    subtitle:    "Academic & Research Projects",
-    category:    "Portfolio",
-    description: "Collection of selected academic and technical work in modeling, analysis, and engineering computation.",
-    longDescription:
-      "A curated collection of academic and research-oriented work covering orbital mechanics, numerical analysis, structural analysis, and control systems. Each project is documented with methodology, results, and key engineering takeaways.",
-    highlights: [
-      "Orbital mechanics and trajectory simulation",
-      "Structural and finite element analysis exercises",
-      "Control systems design and step-response analysis",
-      "Numerical methods and MATLAB-based computation",
-    ],
-    assets: [
-      {
-        type:        "pdf",
-        label:       "Portfolio",
-        description: "Full collection of selected academic and research projects with documentation and results.",
-        path:        "/pdfs/additional-projects.pdf",
       },
     ],
   },

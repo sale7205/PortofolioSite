@@ -38,8 +38,6 @@
   --sidebar-accent-foreground: #d1d5e0;
   --sidebar-border: #2d3344;
   --sidebar-ring: #38bdf8;
-  
-  /* Custom tokens */
   --surface-elevated: #151923;
   --surface-overlay: rgba(21, 25, 35, 0.95);
   --glow: rgba(56, 189, 248, 0.15);
@@ -158,4 +156,16 @@
   .section-elevated {
     background: #151923;
   }
+}
+
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { background: #0f1219 !important; }
+  .print\:hidden { display: none !important; }
+  .print\:py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .print\:px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+  .print\:max-w-none { max-width: none !important; }
+  .print\:border-none { border: none !important; }
+  .print\:rounded-none { border-radius: 0 !important; }
+  .print\:p-6 { padding: 1.5rem !important; }
 }

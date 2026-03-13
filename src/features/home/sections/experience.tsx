@@ -38,7 +38,7 @@ export function Experience() {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="gap-2">
-            <Link href={personal.links.resume} target="_blank" rel="noopener noreferrer">
+            <Link href={personal.links.resume2} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4" />
               View Online
             </Link>
