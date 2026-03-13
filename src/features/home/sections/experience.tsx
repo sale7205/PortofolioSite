@@ -32,7 +32,7 @@ export function Experience() {
 
         <div className="mt-16 flex items-center gap-4">
           <Button asChild size="lg" className="gap-2">
-            <Link href={personal.links.resume} download>
+            <Link href={personal.links.resume2} download>
               <Download className="h-4 w-4" />
               Download CV
             </Link>
