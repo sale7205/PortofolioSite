@@ -1,14 +1,14 @@
 import Link from "next/link"
 import { Github, Linkedin, ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { personal } from "@/content/personal"
-import { skills }   from "@/content/skills"
+import { profile, skills } from "@/content/site"
+import { education, graduationYear } from "@/content/experience"
 
 export function Intro() {
   return (
     <section
       id="intro"
-      className="relative py-40  flex items-center justify-center px-6 overflow-hidden section-dark"
+      className="relative py-40 flex items-center justify-center px-6 overflow-hidden section-dark"
     >
       {/* Background grid */}
       <div
@@ -33,26 +33,29 @@ export function Intro() {
           <div className="md:col-span-3 space-y-6">
             <div className="space-y-3">
               <p className="text-xs font-medium uppercase tracking-widest text-primary">
-                {personal.location}
+                {profile.location}
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-                {personal.name}
+                {profile.name}
               </h1>
               <p className="text-xl md:text-2xl font-medium text-primary">
-                {personal.title}
+                {profile.title}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {education.degree} · {education.school}, {graduationYear}
               </p>
             </div>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed max-w-xl">
-              {personal.bio.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+              {profile.bio.map((paragraph) => (
+                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
               ))}
             </div>
 
             {/* Social links */}
             <div className="flex items-center gap-3 pt-2">
               <Link
-                href={personal.links.github}
+                href={profile.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -61,7 +64,7 @@ export function Intro() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href={personal.links.linkedin}
+                href={profile.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -89,15 +92,10 @@ export function Intro() {
             </div>
           </div>
         </div>
+
         {/* Scroll cue */}
         <div className="absolute -bottom-10 left-0">
-          <Button
-            asChild
-            variant="ghost"
-            size="sm"
-            className="text-muted-foreground hover:text-foreground gap-2"
-          >
-
+          <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground gap-2">
             <Link href="#projects">
               <ArrowDown className="h-4 w-4 animate-bounce" />
               <span className="text-xs uppercase tracking-widest">Scroll</span>

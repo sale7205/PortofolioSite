@@ -1,21 +1,28 @@
 import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { profile, siteUrl } from "@/content/site"
 import "./globals.css"
 
 const inter     = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
+const description =
+  "Aerospace engineer specializing in systems engineering, GNC, EKF-based navigation, CFD analysis, and satellite mission design."
+
 export const metadata: Metadata = {
-  title:       "Saleh Aldhafeeri | Aerospace Engineering Portfolio",
-  description: "Aerospace Engineering Senior at Penn State specializing in Systems Engineering, GNC, CFD Analysis, and Satellite Mission Design.",
-  icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png",  media: "(prefers-color-scheme: dark)"  },
-      { url: "/icon.svg",             type:  "image/svg+xml"                  },
-    ],
-    apple: "/apple-icon.png",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default:  `${profile.name} | Aerospace Engineering Portfolio`,
+    template: `%s | ${profile.name}`,
+  },
+  description,
+  openGraph: {
+    title:       `${profile.name} | Aerospace Engineering Portfolio`,
+    description,
+    url:         siteUrl,
+    siteName:    profile.name,
+    type:        "website",
   },
 }
 

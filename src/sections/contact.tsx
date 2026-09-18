@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
-import { SectionHeader } from "@/components/layout/section-header"
-import { contactLinks } from "@/content/contact"
+import { SectionHeader } from "@/components/section-header"
+import { contactLinks } from "@/content/site"
 
 export function Contact() {
   return (

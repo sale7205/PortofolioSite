@@ -1,5 +1,0 @@
-export { ProjectGrid }   from "./components/project-grid"
-export { ProjectCard }   from "./components/project-card"
-export { ProjectViewer } from "./components/project-viewer"
-export { projects }      from "./data"
-export type { Project, ProjectAsset, AssetType } from "./types"

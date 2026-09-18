@@ -5,7 +5,8 @@ interface PdfToolbarProps {
   numPages:    number
   scale:       number
   path:        string
-  label:       string
+  minScale:    number
+  maxScale:    number
   onPrev:      () => void
   onNext:      () => void
   onZoomIn:    () => void
@@ -17,7 +18,8 @@ export function PdfToolbar({
   numPages,
   scale,
   path,
-  label,
+  minScale,
+  maxScale,
   onPrev,
   onNext,
   onZoomIn,
@@ -56,7 +58,7 @@ export function PdfToolbar({
       <div className="flex items-center gap-1">
         <button
           onClick={onZoomOut}
-          disabled={scale <= 0.5}
+          disabled={scale <= minScale}
           aria-label="Zoom out"
           className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
@@ -69,7 +71,7 @@ export function PdfToolbar({
 
         <button
           onClick={onZoomIn}
-          disabled={scale >= 3.0}
+          disabled={scale >= maxScale}
           aria-label="Zoom in"
           className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >

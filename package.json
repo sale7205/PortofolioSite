@@ -1,12 +1,12 @@
 {
-  "name": "my-project",
+  "name": "saleh-aldhafeeri-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "postinstall": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf-worker/pdf.worker.min.mjs"
   },
   "dependencies": {

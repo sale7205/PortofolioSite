@@ -158,6 +158,17 @@
   }
 }
 
+/* Scroll-reveal content must never stay hidden when motion is off or on paper. */
+@media print, (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    /* Tailwind v4 emits translate utilities on the `translate` property. */
+    translate: 0 0 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 @media print {
   @page { size: A4; margin: 0; }
   html, body { background: #0f1219 !important; }
