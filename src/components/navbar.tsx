@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { navLinks } from "@/content/navigation"
+import { navLinks } from "@/content/site"
 
 export function Navbar() {
   const [isScrolled,        setIsScrolled]        = useState(false)

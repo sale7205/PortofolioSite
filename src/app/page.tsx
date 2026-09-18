@@ -1,9 +1,9 @@
-import { Navbar }     from "@/components/layout/navbar"
-import { Footer }     from "@/components/layout/footer"
-import { Intro }      from "@/features/home"
-import { ProjectGrid } from "@/features/projects"
-import { Experience } from "@/features/home"
-import { Contact }    from "@/features/home"
+import { Navbar }     from "@/components/navbar"
+import { Footer }     from "@/components/footer"
+import { Intro }      from "@/sections/intro"
+import { Projects }   from "@/sections/projects"
+import { Experience } from "@/sections/experience"
+import { Contact }    from "@/sections/contact"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Intro />
-        <ProjectGrid />
+        <Projects />
         <Experience />
         <Contact />
       </main>

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next"
-import { projects } from "@/features/projects"
+import { projects } from "@/content/projects"
+import { siteUrl } from "@/content/site"
 
-const BASE_URL = "https://salehaldhafeeri.com"
+const BASE_URL = siteUrl
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
