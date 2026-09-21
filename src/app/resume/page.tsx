@@ -8,7 +8,7 @@ const summary =
   "focused on systems engineering, GNC, and data-driven problem solving. Academic and project experience spans " +
   "spacecraft mission design, EKF-based navigation algorithm development, and aerodynamic analysis. Hands-on " +
   "industry experience at Saudia Technic and Aramco in continuing airworthiness and MRO operations across " +
-  "narrow-body and wide-body fleets. Currently co-founding Waypoint AI, an LLM routing platform incubated " +
+  "narrow-body and wide-body fleets. Previously founded Waypoint AI, an LLM routing platform incubated " +
   "through the KAUST TIE programme."
 
 export const metadata: Metadata = {

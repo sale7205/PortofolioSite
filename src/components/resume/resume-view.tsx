@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react"
 import Link from "next/link"
-import { Award, Briefcase, Code2, Download, Mail, MapPin, Phone, Linkedin, Rocket, Star } from "lucide-react"
+import { Award, Briefcase, Code2, Mail, MapPin, Phone, Linkedin, Rocket, Star } from "lucide-react"
 import { profile } from "@/content/site"
 import {
   certifications,
@@ -169,15 +169,6 @@ export function ResumeView({ summary }: { summary: string }) {
                   ))}
                 </div>
               </div>
-
-              <Link
-                href={profile.links.resumePdf}
-                download
-                className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-primary text-primary-foreground text-xs font-medium hover:opacity-90 transition-opacity"
-              >
-                <Download size={13} />
-                Download PDF
-              </Link>
             </div>
 
             <nav className="hidden md:block rounded-2xl border border-border bg-card p-4">

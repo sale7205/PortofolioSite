@@ -29,18 +29,18 @@ export interface TimelineEntry {
 export const work: TimelineEntry[] = ([
   {
     id:       "waypoint-ai",
-    role:     "Co-Founder & Technical Lead",
+    role:     "Founder",
     org:      "Waypoint AI",
     location: "Riyadh, Saudi Arabia",
     type:     "Startup",
     start:    "2026-03",
-    end:      null,
+    end:      "2026-08",
     domain:   "violet",
     keys:     ["ai", "llm", "router", "inference", "python", "backend", "systems", "cross-functional"],
-    summary:  "Early-stage venture building an AI model router that sends every prompt to the cheapest model capable of answering it.",
+    summary:  "Founded and ran an early-stage venture building an AI model router that sent every prompt to the cheapest model capable of answering it.",
     bullets: [
-      "Co-founded an early-stage venture around an LLM routing layer; incubated through the KAUST TIE programme and pitched to its demo-day panel.",
-      "Designed and shipped the router: a lightweight classifier scores each prompt for reasoning depth, latency budget and tool use, then dispatches it to the cheapest model in the pool that clears the bar, escalating automatically on low-confidence responses.",
+      "Founded an early-stage venture around an LLM routing layer; incubated through the KAUST TIE programme and pitched to its demo-day panel.",
+      "Designed and shipped the router: a lightweight classifier scored each prompt for reasoning depth, latency budget and tool use, then dispatched it to the cheapest model in the pool that cleared the bar, escalating automatically on low-confidence responses.",
       "Cut blended inference spend by ~60% against an all-frontier-model baseline while holding answer quality within 2% on a 1,200-prompt internal eval set.",
       "Built the platform in Python and TypeScript — streaming proxy, semantic response cache, per-tenant usage metering and provider failover across four model vendors.",
       "Ran discovery with three design partners and turned their traffic patterns into the routing policies that shipped.",
