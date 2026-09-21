@@ -28,6 +28,25 @@ export interface TimelineEntry {
 
 export const work: TimelineEntry[] = ([
   {
+    id:       "waypoint-ai",
+    role:     "Co-Founder & Technical Lead",
+    org:      "Waypoint AI",
+    location: "Riyadh, Saudi Arabia",
+    type:     "Startup",
+    start:    "2026-03",
+    end:      null,
+    domain:   "violet",
+    keys:     ["ai", "llm", "router", "inference", "python", "backend", "systems", "cross-functional"],
+    summary:  "Early-stage venture building an AI model router that sends every prompt to the cheapest model capable of answering it.",
+    bullets: [
+      "Co-founded an early-stage venture around an LLM routing layer; incubated through the KAUST TIE programme and pitched to its demo-day panel.",
+      "Designed and shipped the router: a lightweight classifier scores each prompt for reasoning depth, latency budget and tool use, then dispatches it to the cheapest model in the pool that clears the bar, escalating automatically on low-confidence responses.",
+      "Cut blended inference spend by ~60% against an all-frontier-model baseline while holding answer quality within 2% on a 1,200-prompt internal eval set.",
+      "Built the platform in Python and TypeScript — streaming proxy, semantic response cache, per-tenant usage metering and provider failover across four model vendors.",
+      "Ran discovery with three design partners and turned their traffic patterns into the routing policies that shipped.",
+    ],
+  },
+  {
     id:       "saudia-technic",
     role:     "Aircraft Engineer",
     org:      "Saudia Technic",
@@ -122,15 +141,43 @@ export const leadership: TimelineEntry[] = ([
   },
 ] satisfies TimelineEntry[]).sort(byMostRecent)
 
-export const education = {
-  school: "Penn State University",
-  degree: "B.S. Aerospace Engineering",
-  start:  "2023-01" as YearMonth,
-  end:    "2026-05" as YearMonth,
+export interface EducationEntry {
+  id:        string
+  school:    string
+  degree:    string
+  location?: string
+  start:     YearMonth
+  end:       YearMonth | null
+  /** Optional line shown under the dates on the resume sidebar. */
+  note?:     string
 }
 
+export const education: EducationEntry[] = ([
+  {
+    id:       "kaust-tie",
+    school:   "KAUST",
+    degree:   "TIE — Technology, Innovation & Entrepreneurship",
+    location: "Thuwal, Saudi Arabia",
+    start:    "2026-06",
+    end:      "2026-08",
+    note:     "Venture track — incubated and pitched Waypoint AI",
+  },
+  {
+    id:       "penn-state",
+    school:   "Penn State University",
+    degree:   "B.S. Aerospace Engineering",
+    location: "University Park, PA",
+    start:    "2023-01",
+    end:      "2026-05",
+  },
+] satisfies EducationEntry[]).sort(byMostRecent)
+
+/** The degree-granting programme — what the intro line and page metadata cite. */
+export const primaryEducation =
+  education.find((entry) => entry.id === "penn-state") ?? education[0]
+
 /** Graduation year, derived so it never drifts from the education dates. */
-export const graduationYear = education.end.split("-")[0]
+export const graduationYear = (primaryEducation.end ?? primaryEducation.start).split("-")[0]
 
 export interface Certification {
   name: string
@@ -161,6 +208,7 @@ export const competencies: Competency[] = [
   { label: "MATLAB",              domain: "cyan",   keys: ["matlab", "ekf", "simulation"]               },
   { label: "ANSYS Fluent",        domain: "amber",  keys: ["cfd", "fluent", "aerodynamic"]              },
   { label: "SolidWorks",          domain: "amber",  keys: ["solidworks", "turbine", "blade"]            },
+  { label: "LLM Infrastructure",  domain: "violet", keys: ["ai", "llm", "router", "inference"]        },
   { label: "Python",              domain: "violet", keys: ["python", "website", "backend"]              },
   { label: "STK",                 domain: "violet", keys: ["stk", "orbit", "satellite"]                 },
   { label: "CAD / FEA",           domain: "amber",  keys: ["cad", "solidworks", "structural"]           },

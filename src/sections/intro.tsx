@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Github, Linkedin, ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { profile, skills } from "@/content/site"
-import { education, graduationYear } from "@/content/experience"
+import { primaryEducation, graduationYear } from "@/content/experience"
 
 export function Intro() {
   return (
@@ -42,7 +42,7 @@ export function Intro() {
                 {profile.title}
               </p>
               <p className="text-sm text-muted-foreground">
-                {education.degree} · {education.school}, {graduationYear}
+                {primaryEducation.degree} · {primaryEducation.school}, {graduationYear}
               </p>
             </div>
 

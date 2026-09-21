@@ -91,9 +91,13 @@ export default async function ProjectPage({ params }: Props) {
               <h2 className="text-xs font-medium uppercase tracking-wider text-primary mb-4">
                 Overview
               </h2>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {project.longDescription}
-              </p>
+              <div className="space-y-4">
+                {project.longDescription.split("\n\n").map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)} className="text-muted-foreground leading-relaxed text-sm">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
 
             <div className="md:w-72 shrink-0">
@@ -111,13 +115,15 @@ export default async function ProjectPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Assets */}
-          <div className="mt-14 border-t border-border pt-12">
-            <h2 className="text-xs font-medium uppercase tracking-wider text-primary mb-2">
-              Documents & Media
-            </h2>
-            <ProjectViewer assets={project.assets} />
-          </div>
+          {/* Assets — omitted entirely for projects with nothing to show */}
+          {project.assets.length > 0 && (
+            <div className="mt-14 border-t border-border pt-12">
+              <h2 className="text-xs font-medium uppercase tracking-wider text-primary mb-2">
+                Documents & Media
+              </h2>
+              <ProjectViewer assets={project.assets} />
+            </div>
+          )}
 
         </div>
       </main>

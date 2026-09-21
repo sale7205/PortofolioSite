@@ -154,11 +154,20 @@ export function ResumeView({ summary }: { summary: string }) {
 
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/50 mb-2">Education</p>
-                <p className="text-sm font-semibold text-foreground">{education.school}</p>
-                <p className="text-xs text-primary/80">{education.degree}</p>
-                <p className="text-xs text-muted-foreground font-mono mt-0.5">
-                  {formatPeriod(education.start, education.end)}
-                </p>
+                <div className="flex flex-col gap-3">
+                  {education.map((entry) => (
+                    <div key={entry.id}>
+                      <p className="text-sm font-semibold text-foreground">{entry.school}</p>
+                      <p className="text-xs text-primary/80">{entry.degree}</p>
+                      <p className="text-xs text-muted-foreground font-mono mt-0.5">
+                        {formatPeriod(entry.start, entry.end)}
+                      </p>
+                      {entry.note && (
+                        <p className="text-xs text-muted-foreground/70 mt-0.5 leading-snug">{entry.note}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <Link
