@@ -33,31 +33,6 @@ export interface Project {
 
 export const projects: Project[] = ([
   {
-    slug:        "waypoint-ai",
-    title:       "Waypoint AI",
-    subtitle:    "LLM Model Router",
-    category:    "AI Infrastructure",
-    start:       "2026-03",
-    end:         null,
-    domain:      "violet",
-    keys:        ["ai", "llm", "router", "inference", "python", "backend", "systems", "cross-functional"],
-    description: "Co-founded venture building a routing layer that sends every prompt to the cheapest model that can still answer it correctly — roughly 60% off a frontier-only baseline.",
-    longDescription:
-      "Waypoint AI started from a simple observation: most teams building on large language models send every request to the largest model they can afford, and most of those requests never needed it. Summarising a changelog, extracting a date, rewriting a paragraph — a small model answers those as well as a frontier one for a fraction of the cost and a fraction of the latency. The hard part is telling, before you answer, which request is which.\n\n" +
-      "The router does that classification up front. Each incoming prompt is scored along three axes — reasoning depth, latency budget and whether tool or function calls are involved — and dispatched to the cheapest model in the pool that clears the bar for all three. Responses carry a confidence signal; anything below threshold is transparently escalated to a stronger model and the original answer is discarded, so the caller sees a single clean response and never sees the retry. Routing decisions are logged with their downstream outcome, which turns the eval set into a feedback loop: policies are re-fit against real traffic rather than guessed at.\n\n" +
-      "Around the router sits the rest of a platform: a streaming proxy that keeps time-to-first-token close to a direct provider call, a semantic response cache, per-tenant usage metering and billing, and failover across four model vendors so a single provider outage degrades cost rather than availability. Built in Python and TypeScript, deployed as a stateless service behind a managed queue.\n\n" +
-      "The venture was incubated through the KAUST TIE programme, where the routing thesis was pressure-tested against mentors and pitched at demo day. Three design partners ran production traffic through the router during that cohort, and their traffic patterns shaped the routing policies that shipped.",
-    highlights: [
-      "Prompt classifier scoring reasoning depth, latency budget and tool use before dispatch",
-      "~60% lower blended inference cost vs. an all-frontier baseline, within 2% on quality across 1,200 eval prompts",
-      "Automatic escalation on low-confidence responses — the caller sees one clean answer",
-      "Streaming proxy, semantic cache, usage metering and failover across four model vendors",
-      "Incubated and pitched through the KAUST TIE venture programme with three design partners",
-    ],
-    // No resumeSummary: this already appears under Professional Experience.
-    assets: [],
-  },
-  {
     slug:        "prometheus-mission",
     title:       "Prometheus Mission I",
     subtitle:    "Autonomous Satellite Refueling Mission",
