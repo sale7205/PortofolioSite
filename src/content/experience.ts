@@ -37,13 +37,13 @@ export const work: TimelineEntry[] = ([
     end:      "2026-03",
     domain:   "violet",
     keys:     ["ai", "llm", "router", "inference", "python", "backend", "systems", "cross-functional"],
-    summary:  "Founded and ran an early-stage venture building an AI model router that sent every prompt to the cheapest model capable of answering it.",
+    summary:  "Founded and ran a self-funded venture building an AI model router that sent every prompt to the cheapest model capable of answering it.",
     bullets: [
-      "Founded an early-stage venture around an LLM routing layer; incubated through the KAUST TIE programme and pitched to its demo-day panel.",
+      "Founded and bootstrapped an independent venture around an LLM routing layer, run solo alongside freelance engineering work from first prototype through to wind-down.",
       "Designed and shipped the router: a lightweight classifier scored each prompt for reasoning depth, latency budget and tool use, then dispatched it to the cheapest model in the pool that cleared the bar, escalating automatically on low-confidence responses.",
       "Cut blended inference spend by ~60% against an all-frontier-model baseline while holding answer quality within 2% on a 1,200-prompt internal eval set.",
       "Built the platform in Python and TypeScript — streaming proxy, semantic response cache, per-tenant usage metering and provider failover across four model vendors.",
-      "Ran discovery with three design partners and turned their traffic patterns into the routing policies that shipped.",
+      "Sold and onboarded three paying clients off freelance networks, turning their traffic patterns into the routing policies that shipped.",
     ],
   },
   {
@@ -158,9 +158,8 @@ export const education: EducationEntry[] = ([
     school:   "KAUST",
     degree:   "TIE — Technology, Innovation & Entrepreneurship",
     location: "Thuwal, Saudi Arabia",
-    start:    "2026-01",
-    end:      "2026-03",
-    note:     "Venture track — incubated and pitched Waypoint AI",
+    start:    "2026-08",
+    end:      "2027-05",
   },
   {
     id:       "penn-state",

@@ -12,6 +12,7 @@ export const profile = {
   bio: [
     "Aerospace engineer focused on automation, GNC, autonomous vehicles, systems engineering, technical modeling, and data-driven problem solving. Academic and project experience spans spacecraft mission design, navigation algorithm development, and aerodynamic analysis.",
     "Hands-on industry experience at Saudia Technic and Aramco, contributing to continuing airworthiness frameworks and maintenance support operations across narrow-body and wide-body fleets.",
+    "Builds and ships software ventures independently alongside the engineering work — founded Waypoint AI, a self-funded LLM routing platform sold to freelance clients, and currently studying technology innovation and entrepreneurship on the KAUST TIE programme.",
   ],
   links: {
     github:     "https://github.com/sale7205",
