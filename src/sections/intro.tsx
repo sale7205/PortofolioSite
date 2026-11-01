@@ -32,9 +32,6 @@ export function Intro() {
           {/* Identity — left */}
           <div className="md:col-span-3 space-y-6">
             <div className="space-y-3">
-              <p className="text-xs font-medium uppercase tracking-widest text-primary">
-                {profile.location}
-              </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
                 {profile.name}
               </h1>

@@ -8,12 +8,9 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://salehaldhafe
 export const profile = {
   name:     "Saleh Aldhafeeri",
   title:    "Aerospace Engineering",
-  location: "Riyadh, Saudi Arabia",
   bio: [
-    "Aerospace engineer focused on automation, GNC, autonomous vehicles, systems engineering, technical modeling, and data-driven problem solving. Academic and project experience spans spacecraft mission design, navigation algorithm development, and aerodynamic analysis.",
-    "Hands-on industry experience at Saudia Technic and Aramco, contributing to continuing airworthiness frameworks and maintenance support operations across narrow-body and wide-body fleets.",
-    "Builds and ships software ventures independently alongside the engineering work — founded Waypoint AI, a self-funded LLM routing platform sold to freelance clients.",
-    "Strategy consulting experience as a Strategy New Associate at Accenture Riyadh, designing target operating models for technology and digital transformation programs, and currently studying technology innovation and entrepreneurship on the KAUST TIE programme.",
+    "Aerospace engineer working across GNC, systems engineering and data-driven problem solving, with project work in spacecraft mission design, navigation and aerodynamics.",
+    "Industry experience in airworthiness at Saudia Technic and Aramco and in strategy at Accenture. Founded Waypoint AI, an LLM routing venture, and now studying at KAUST TIE.",
   ],
   links: {
     github:     "https://github.com/sale7205",
@@ -21,7 +18,7 @@ export const profile = {
     email:      "salehaldhafeeri@outlook.com",
     phone:      "+966 553 646 561",
     resumePage: "/resume",
-    resumePdf:  "/resume/SalehAldhafeeriAerospaceCVV.pdf",
+    resumePdf:  "/cv/Saleh-Aldhafeeri-CV.pdf",
   },
 } as const
 
