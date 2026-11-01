@@ -28,6 +28,24 @@ export interface TimelineEntry {
 
 export const work: TimelineEntry[] = ([
   {
+    id:       "accenture-strategy",
+    role:     "Strategy New Associate",
+    org:      "Accenture",
+    location: "Riyadh, Saudi Arabia",
+    type:     "Full-time",
+    start:    "2026-05",
+    end:      "2026-07",
+    domain:   "violet",
+    keys:     ["systems", "cross-functional"],
+    summary:  "Strategy consulting in Accenture's Riyadh practice, designing operating models for client technology and digital transformation programs.",
+    bullets: [
+      "Supported technology and digital transformation engagements in Accenture's Riyadh strategy practice, helping clients restructure how they deliver and govern digital capabilities.",
+      "Contributed to target operating model design: mapped current-state processes, roles and governance, identified gaps, and helped define future-state structures and decision rights.",
+      "Turned stakeholder interviews and benchmarking into structured analysis and executive-ready deliverables that framed the case for change.",
+      "Worked across client and Accenture teams, applying a systems engineering mindset to break complex organizational problems into clear, sequenced recommendations.",
+    ],
+  },
+  {
     id:       "waypoint-ai",
     role:     "Founder",
     org:      "Waypoint AI",
