@@ -168,7 +168,7 @@ export const education: EducationEntry[] = ([
   {
     id:       "kaust-tie",
     school:   "KAUST",
-    degree:   "TIE — Technology, Innovation & Entrepreneurship",
+    degree:   "MS Technology Innovation & Entrepreneurship",
     location: "Thuwal, Saudi Arabia",
     start:    "2026-08",
     end:      "2027-05",
