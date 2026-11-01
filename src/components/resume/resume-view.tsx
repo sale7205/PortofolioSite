@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react"
 import Link from "next/link"
-import { Award, Briefcase, Code2, Mail, Phone, Linkedin, Rocket, Star } from "lucide-react"
+import { Award, Briefcase, Code2, Mail, Linkedin, Rocket, Star } from "lucide-react"
 import { profile } from "@/content/site"
 import {
   certifications,
@@ -87,7 +87,6 @@ export function ResumeView({ summary }: { summary: string }) {
   )
 
   const contactRows = [
-    { icon: Phone,    text: profile.links.phone,    href: `tel:${profile.links.phone.replace(/\s/g, "")}` },
     { icon: Mail,     text: profile.links.email,    href: `mailto:${profile.links.email}` },
     { icon: Linkedin, text: profile.links.linkedin.replace("https://", ""), href: profile.links.linkedin },
   ]
