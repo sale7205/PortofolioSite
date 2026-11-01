@@ -7,7 +7,7 @@ const summary =
   "data-driven problem solving. Project experience spans spacecraft mission design, EKF-based navigation, and " +
   "aerodynamic analysis; industry experience at Saudia Technic and Aramco covers continuing airworthiness and " +
   "MRO operations on narrow-body and wide-body fleets. Founded and ran Waypoint AI, a self-funded LLM routing " +
-  "venture sold to independent clients, then joined Accenture's Riyadh strategy practice as a Strategy New " +
+  "venture sold to independent clients, then joined Accenture's strategy practice as a Strategy New " +
   "Associate, designing operating models for digital transformation programs. Now studying technology " +
   "innovation and entrepreneurship at KAUST TIE."
 
