@@ -16,7 +16,6 @@ export const profile = {
     github:     "https://github.com/sale7205",
     linkedin:   "https://linkedin.com/in/0c0",
     email:      "salehaldhafeeri@outlook.com",
-    phone:      "+966 553 646 561",
     resumePage: "/resume",
     resumePdf:  "/cv/Saleh-Aldhafeeri-CV.pdf",
   },
