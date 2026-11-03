@@ -15,7 +15,7 @@ import {
 import { resumeProjects } from "@/content/projects"
 import { formatPeriod } from "@/lib/date"
 import { domainStyles, DIMMED } from "./domains"
-import { AnimatedCard, SectionCard, Timeline, useTyping, type TimelineItem } from "./resume-ui"
+import { AnimatedCard, SectionCard, Timeline, type TimelineItem } from "./resume-ui"
 
 const sections = [
   { id: "about",        label: "About"          },
@@ -42,8 +42,6 @@ function toTimelineItem(entry: TimelineEntry): TimelineItem {
 export function ResumeView({ summary }: { summary: string }) {
   const [activeSection, setActiveSection] = useState("about")
   const [highlightedKeys, setHighlightedKeys] = useState<string[]>([])
-  const [typingActive, setTypingActive] = useState(false)
-  const typedTitle = useTyping("Aerospace Engineer", 65, typingActive)
 
   const experienceItems = useMemo(() => work.map(toTimelineItem), [])
   const leadershipItems = useMemo(() => leadership.map(toTimelineItem), [])
@@ -61,11 +59,6 @@ export function ResumeView({ summary }: { summary: string }) {
       })),
     [],
   )
-
-  useEffect(() => {
-    const timer = setTimeout(() => setTypingActive(true), 500)
-    return () => clearTimeout(timer)
-  }, [])
 
   useEffect(() => {
     const observers = sections.flatMap(({ id }) => {
@@ -119,10 +112,6 @@ export function ResumeView({ summary }: { summary: string }) {
                       </span>
                     ))}
                   </div>
-                  <p className="text-sm font-semibold text-primary mt-2 font-mono min-h-[1.25rem] tracking-wide">
-                    {typedTitle}
-                    <span className="animate-pulse opacity-60">|</span>
-                  </p>
                 </div>
               </div>
 
@@ -275,7 +264,7 @@ export function ResumeView({ summary }: { summary: string }) {
             </AnimatedCard>
 
             <p className="text-center text-[11px] text-muted-foreground/40 py-4 font-mono">
-              {new Date().getFullYear()} · {profile.name} · Aerospace Engineering
+              {new Date().getFullYear()} · {profile.name}
             </p>
 
           </div>

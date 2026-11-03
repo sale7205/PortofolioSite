@@ -35,9 +35,6 @@ export function Intro() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
                 {profile.name}
               </h1>
-              <p className="text-xl md:text-2xl font-medium text-primary">
-                {profile.title}
-              </p>
               <p className="text-sm text-muted-foreground">
                 {primaryEducation.degree} · {primaryEducation.school}, {graduationYear}
               </p>

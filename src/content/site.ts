@@ -7,7 +7,6 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://salehaldhafe
 
 export const profile = {
   name:     "Saleh Aldhafeeri",
-  title:    "Aerospace Engineering",
   bio: [
     "Aerospace engineer working across GNC, systems engineering and data-driven problem solving, with project work in spacecraft mission design, navigation and aerodynamics.",
     "Industry experience in airworthiness at Saudia Technic and Aramco and in strategy at Accenture. Founded Waypoint AI, an LLM routing venture, and now pursuing an MS in Technology Innovation and Entrepreneurship at KAUST.",

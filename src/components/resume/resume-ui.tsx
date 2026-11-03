@@ -47,24 +47,6 @@ export function useInView<T extends HTMLElement = HTMLDivElement>(threshold = 0.
   return { ref, inView }
 }
 
-export function useTyping(text: string, speed = 65, active = false) {
-  const [displayed, setDisplayed] = useState("")
-
-  useEffect(() => {
-    if (!active) return
-    let i = 0
-    setDisplayed("")
-    const interval = setInterval(() => {
-      i += 1
-      setDisplayed(text.slice(0, i))
-      if (i >= text.length) clearInterval(interval)
-    }, speed)
-    return () => clearInterval(interval)
-  }, [active, text, speed])
-
-  return displayed
-}
-
 export function AnimatedCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const { ref, inView } = useInView()
   return (

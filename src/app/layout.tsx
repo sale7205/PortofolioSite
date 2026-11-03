@@ -13,12 +13,12 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default:  `${profile.name} | Aerospace Engineering Portfolio`,
+    default:  `${profile.name} | Portfolio`,
     template: `%s | ${profile.name}`,
   },
   description,
   openGraph: {
-    title:       `${profile.name} | Aerospace Engineering Portfolio`,
+    title:       `${profile.name} | Portfolio`,
     description,
     url:         siteUrl,
     siteName:    profile.name,
