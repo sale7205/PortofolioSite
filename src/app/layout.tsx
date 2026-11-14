@@ -17,6 +17,22 @@ export const metadata: Metadata = {
     template: `%s | ${profile.name}`,
   },
   description,
+  // Unlisted site: accessible by link, but not indexed by search engines.
+  robots: {
+    index:        false,
+    follow:       false,
+    nocache:      true,
+    noarchive:    true,
+    nosnippet:    true,
+    noimageindex: true,
+    googleBot: {
+      index:        false,
+      follow:       false,
+      noarchive:    true,
+      nosnippet:    true,
+      noimageindex: true,
+    },
+  },
   openGraph: {
     title:       `${profile.name} | Portfolio`,
     description,
